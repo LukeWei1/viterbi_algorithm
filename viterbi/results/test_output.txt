@@ -1,0 +1,15 @@
+./test_viterbi
+[weather] textbook example
+[weather] every observation sequence of length 1..6
+  compared 1092 sequences
+[casino] hand-made rolls (T=20) vs brute force
+  rolls : 31524312546666663142
+  states: FFFFFFFFFFLLLLLLFFFF   (F=fair, L=loaded)
+[random] 500 random HMMs vs brute force (tie-tolerant)
+  mismatches: 0
+[edge] T=0, T=1, zero probabilities, impossible input
+[underflow] long casino sequence (T=100000)
+  log P = -180606.0  (e^that underflows to 0 in double precision)
+  state accuracy vs. truth: 79.3%   (always-guess-Fair: 66.5%)
+
+1107 checks, 0 failed

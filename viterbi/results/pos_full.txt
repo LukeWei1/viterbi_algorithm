@@ -1,0 +1,37 @@
+corpus: 57340 sentences  (train 51606 / test 5734),  459 tags,  47517 distinct training words
+training time: 0.917 s
+
+token accuracy (%)            overall      known    unknown
+most-common-tag baseline        89.19      90.62      21.49
+HMM + Viterbi                   94.49      95.01      69.65
+(test tokens: 115685 total, 113293 known, 2392 unknown = 2.1% OOV)
+decoding speed: 2269 tokens/s
+
+most frequent HMM errors (gold -> predicted):
+  NN-TL    -> NN          423
+  NN       -> NN-TL       337
+  NN       -> JJ          220
+  VBN      -> VBD         205
+  VBD      -> VBN         193
+  JJ-TL    -> JJ          144
+  NP       -> NP-TL       118
+  VB       -> NN          112
+
+example test sentence:
+  word           gold     baseline HMM     
+  Mr.            NP       NP       NP      
+  Oakes          NP       NP       NP      
+  succeeds       VBZ      VBZ      VBZ     
+  Charles        NP       NP       NP      
+  Merz           NP       NP       NP      
+  ,              ,        ,        ,       
+  editor         NN       NN       NN      
+  since          IN       CS       IN      
+  1938           CD       CD       CD      
+  ,              ,        ,        ,       
+  who            WPS      WPS      WPS     
+  now            RB       RB       RB      
+  becomes        VBZ      VBZ      VBZ     
+  editor         NN       NN       NN      
+  emeritus       JJ       JJ       JJ      
+  .              .        .        .       

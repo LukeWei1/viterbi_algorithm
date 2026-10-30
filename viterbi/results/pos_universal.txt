@@ -1,0 +1,37 @@
+corpus: 57340 sentences  (train 51606 / test 5734),  12 tags,  47517 distinct training words
+training time: 0.513 s
+
+token accuracy (%)            overall      known    unknown
+most-common-tag baseline        94.56      95.30      59.66
+HMM + Viterbi                   96.79      97.15      79.52
+(test tokens: 115685 total, 113293 known, 2392 unknown = 2.1% OOV)
+decoding speed: 2657580 tokens/s
+
+most frequent HMM errors (gold -> predicted):
+  VERB     -> NOUN        599
+  NOUN     -> ADJ         350
+  NOUN     -> VERB        300
+  ADJ      -> ADV         253
+  ADJ      -> NOUN        235
+  PRT      -> ADP         228
+  ADV      -> ADJ         202
+  ADP      -> ADV         199
+
+example test sentence:
+  word           gold     baseline HMM     
+  Mr.            NOUN     NOUN     NOUN    
+  Oakes          NOUN     NOUN     NOUN    
+  succeeds       VERB     VERB     VERB    
+  Charles        NOUN     NOUN     NOUN    
+  Merz           NOUN     NOUN     NOUN    
+  ,              .        .        .       
+  editor         NOUN     NOUN     NOUN    
+  since          ADP      ADP      ADP     
+  1938           NUM      NUM      NUM     
+  ,              .        .        .       
+  who            PRON     PRON     PRON    
+  now            ADV      ADV      ADV     
+  becomes        VERB     VERB     VERB    
+  editor         NOUN     NOUN     NOUN    
+  emeritus       ADJ      ADJ      ADJ     
+  .              .        .        .       
